@@ -52,7 +52,7 @@
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "eslint lint --fix"
+      "eslint --fix"
     ]
   }
 }
