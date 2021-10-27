@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-typescript-monorepo-boilerplate",
+  "name": "nestjs-nextjs-typescript-monorepo-boilerplate",
   "private": true,
   "scripts": {
     "dev:frontend": "yarn workspace frontend dev",
