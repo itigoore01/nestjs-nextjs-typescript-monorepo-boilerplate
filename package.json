@@ -1,12 +1,13 @@
 {
-  "name": "nextjs-typescript-monorepo-boilerplate",
+  "name": "nestjs-nextjs-typescript-monorepo-boilerplate",
   "private": true,
   "scripts": {
     "dev:frontend": "yarn workspace frontend dev",
+    "dev:backend": "yarn workspace backend start:dev",
     "lint": "yarn workspaces run lint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "yarn workspace frontend type-check && yarn workspace frontend test",
+    "test": "yarn workspace frontend type-check && yarn workspaces run test",
     "prepare": "husky install"
   },
   "lint-staged": {
