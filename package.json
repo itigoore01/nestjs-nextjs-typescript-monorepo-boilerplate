@@ -1,0 +1,27 @@
+{
+  "name": "nextjs-typescript-monorepo-boilerplate",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "yarn workspace frontend dev",
+    "lint": "yarn workspaces run lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "yarn workspace frontend type-check && yarn workspace frontend test",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "husky": "7.0.4",
+    "prettier": "2.4.1",
+    "prettier-plugin-tailwind": "2.2.12"
+  }
+}
