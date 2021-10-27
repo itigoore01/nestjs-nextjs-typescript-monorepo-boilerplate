@@ -1,6 +1,6 @@
 [![Test](https://github.com/itigoore01/nextjs-typescript-boilerplate/actions/workflows/test.yml/badge.svg)](https://github.com/itigoore01/nextjs-typescript-boilerplate/actions/workflows/test.yml)
 
-# NextJS Typescript Monorepo Boilerplate
+# NestJS + NextJS Typescript Monorepo Boilerplate
 
 Bootstrap a developer-friendly NextJS app configured with:
 
