@@ -4,6 +4,7 @@ import {
   FastifyAdapter,
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
+import fastifyCookie from 'fastify-cookie';
 import { AppModule } from './app.module';
 import { Configuration } from './config/configuration';
 
@@ -15,8 +16,19 @@ async function bootstrap() {
 
   const configService =
     app.get<ConfigService<Configuration, true>>(ConfigService);
-  const port = configService.get('nest.port', { infer: true });
 
-  await app.listen(port);
+  // add cookie plugin
+  app.register(fastifyCookie, {
+    secret: configService.get('cookie.secret', { infer: true }),
+    parseOptions: {
+      sameSite: 'lax',
+      secure: configService.get('cookie.secure', { infer: true }),
+      signed: true,
+      httpOnly: true,
+    },
+  });
+
+  await app.listen(configService.get('nest.port', { infer: true }));
 }
+
 bootstrap();

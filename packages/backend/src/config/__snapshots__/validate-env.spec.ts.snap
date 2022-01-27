@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Validate env should throws error 1`] = `
+"An instance of EnvironmentVariables has failed the validation:
+ - property NODE_ENV has failed the following constraints: isIn 
+,An instance of EnvironmentVariables has failed the validation:
+ - property PORT has failed the following constraints: isNumberString 
+,An instance of EnvironmentVariables has failed the validation:
+ - property COOKIE_SECRET has failed the following constraints: isString 
+,An instance of EnvironmentVariables has failed the validation:
+ - property COOKIE_SECURE has failed the following constraints: isBooleanString 
+"
+`;

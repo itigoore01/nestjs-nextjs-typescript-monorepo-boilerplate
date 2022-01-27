@@ -7,7 +7,7 @@
     "lint": "yarn workspaces run lint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "yarn workspace frontend type-check && yarn workspaces run test",
+    "test": "yarn workspace frontend type-check && yarn workspaces run test && yarn workspace backend run test:e2e",
     "prepare": "husky install"
   },
   "lint-staged": {
